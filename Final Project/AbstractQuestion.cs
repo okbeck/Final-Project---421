@@ -10,6 +10,13 @@ namespace Final_Project
     {
         protected Prompt prompt;
         protected Answer answer;
+
+        public AbstractQuestion(Prompt prompt, Answer answer)
+        {
+            this.prompt = prompt;
+            this.answer = answer;
+        }
+
         public abstract bool Evaluate();
         public string GetPrompt() => prompt.Text;
         public string GetAnswer() => answer.Text;
