@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Final_Project
 {
+    using System.Collections.Generic;
+
     public class MultipleChoiceBuilder : Builder
     {
         private string prompt;
@@ -30,16 +32,19 @@ namespace Final_Project
             return this;
         }
 
-        public MultipleChoiceBuilder SetCorrectOption(string option)
+        public MultipleChoiceBuilder SetCorrectOption(string correctOption)
         {
-            this.correctAnswer = option;
+            this.correctAnswer = correctOption;
             return this;
         }
 
         public QuestionIF Build()
         {
-            return new MultipleChoice(new Prompt(prompt), new Answer(correctAnswer), options);
+            var promptObj = new Prompt(prompt);
+            var answerObj = new Answer(correctAnswer);
+            return new MultipleChoice(promptObj, answerObj, options, options.IndexOf(correctAnswer));
         }
     }
+
 
 }

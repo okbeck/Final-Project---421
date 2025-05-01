@@ -8,15 +8,17 @@ namespace Final_Project
 {
     public class OpenEnded : AbstractQuestion
     {
-        public OpenEnded(Prompt prompt, Answer answer)
+        private string userInput;
+
+        public OpenEnded(Prompt prompt, Answer answer, string userInput)
+            : base(prompt, answer)
         {
-            this.prompt = prompt;
-            this.answer = answer;
+            this.userInput = userInput;
         }
+
         public override bool Evaluate()
         {
-            // For demo purposes, just return true
-            return true;
+            return userInput.Trim().Equals(answer.Text.Trim());
         }
     }
 }

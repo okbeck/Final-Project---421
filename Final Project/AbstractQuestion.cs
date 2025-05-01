@@ -18,7 +18,6 @@ namespace Final_Project
         }
 
         public abstract bool Evaluate();
-        public string GetPrompt() => prompt.Text;
-        public string GetAnswer() => answer.Text;
     }
+
 }

@@ -3,32 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.Design.AxImporter;
 
 namespace Final_Project
 {
     public class MultipleChoice : AbstractQuestion_Options
     {
-        private string correctAnswer;
-        public MultipleChoice(Prompt prompt, string correctAnswer, List<string> options)
-        {
-            this.prompt = prompt;
-            this.correctAnswer = correctAnswer;
-            this.options = options;
-        }
+        private int selectedIndex;
 
-        public MultipleChoice(Prompt prompt, Answer answer, List<string> options)
+        public MultipleChoice(Prompt prompt, Answer answer, List<string> entries, int selectedIndex)
+            : base(prompt, answer, new Options())
         {
-            this.prompt = prompt;
-            this.answer = answer;
-            this.options = options;
+            foreach (var entry in entries)
+            {
+                this.options.AddEntry(entry);
+            }
+            this.selectedIndex = selectedIndex;
         }
 
         public override bool Evaluate()
         {
-            // Dummy logic for now
-            return true;
+            string selected = options.GetOption(selectedIndex);
+            return selected != null && selected.Equals(answer.Text);
         }
-        public string GetCorrectAnswer() => correctAnswer;
+
+        public string GetCorrectAnswer() => answer.Text;
     }
+
 
 }

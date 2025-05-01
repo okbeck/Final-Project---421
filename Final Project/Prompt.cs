@@ -9,6 +9,11 @@ namespace Final_Project
     public class Prompt
     {
         public string Text { get; set; }
-        public Prompt(string text) => Text = text;
+
+        public Prompt(string text)
+        {
+            Text = text;
+        }
     }
+
 }

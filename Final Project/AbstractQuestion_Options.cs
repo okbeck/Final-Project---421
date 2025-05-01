@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.Design.AxImporter;
 
 namespace Final_Project
 {
@@ -10,12 +11,16 @@ namespace Final_Project
     // Test
     public abstract class AbstractQuestion_Options : AbstractQuestion
     {
-        protected List<string> options;
-        public AbstractQuestion_Options() => options = new List<string>();
-        public void AddOption(string option) => options.Add(option);
-        public void RemoveOption(int index) => options.RemoveAt(index);
-        public string GetOption(int index) => options[index];
-        public List<string> GetOptions() => new List<string>(options);
+        protected Options options;
+
+        public AbstractQuestion_Options(Prompt prompt, Answer answer, Options options)
+            : base(prompt, answer)
+        {
+            this.options = options;
+        }
+
+        public override abstract bool Evaluate();
     }
+
 
 }
