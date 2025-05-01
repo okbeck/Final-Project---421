@@ -26,5 +26,15 @@
             stats.Closed += (s, a) => { Show(); };
             Hide();
         }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
