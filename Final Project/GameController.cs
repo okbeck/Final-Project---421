@@ -9,41 +9,43 @@ namespace Final_Project
     public class GameController
     {
         private GameState currentState;
+        //private QuizRound currentRound;
+        private QuestionSource source;
+        private Builder builder;
         private Quiz quiz;
-        private QuestionSource source = new UploadSource();
+
+        public GameController(QuestionSource source, Builder builder)
+        {
+            this.source = source;
+            this.builder = builder;
+            this.currentState = new MainMenuState();
+
+            // dynamic linkage
+            var loader = new AbstractLoadableQuiz(source);
+            loader.PopulateQuiz();
+            quiz = (Quiz)loader.GetQuiz();
+        }
 
         public void StartGame()
         {
-            quiz = new Quiz();
-            foreach (var q in source.LoadQuestions())
-            {
-                quiz.AddQuestion(q);
-            }
-            currentState = new MainMenuState(this);
-            currentState.Enter();
+            Console.WriteLine("Starting Game...");
+            currentState = currentState.Render(GameState.GameEvent);
         }
 
         public void SubmitAnswer()
         {
-            Console.WriteLine("Answer submitted.");
-            quiz.Evaluate();
-            quiz.NextQuestion();
+            Console.WriteLine("Submitting answer...");
+           // currentState = currentState.HandleInput(new Button("Apply"), new Button("Save"), new Button("Revert"));
         }
-
-        public void ChangeState(GameState newState)
-        {
-            currentState = newState;
-            currentState.Enter();
-        }
-
         public QuestionIF GetCurrentQuestion()
         {
             return quiz.GetCurrentQuestion();
         }
 
-        public bool HasNextQuestion()
+        public void ChangeState(GameState newState)
         {
-            return quiz.HasNextQuestion();
+            currentState = newState;
         }
     }
+
 }

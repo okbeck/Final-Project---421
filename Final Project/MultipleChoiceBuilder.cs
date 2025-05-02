@@ -40,9 +40,13 @@ namespace Final_Project
 
         public QuestionIF Build()
         {
-            var promptObj = new Prompt(prompt);
-            var answerObj = new Answer(correctAnswer);
-            return new MultipleChoice(promptObj, answerObj, options, options.IndexOf(correctAnswer));
+            var opts = new Options();
+            foreach (var option in options)
+            {
+                opts.AddEntry(option);
+            }
+
+            return new MultipleChoice(new Prompt(prompt), new Answer(correctAnswer), opts);
         }
     }
 

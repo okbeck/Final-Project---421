@@ -22,9 +22,8 @@ namespace Final_Project
             return null;
         }
 
-        public List<string> GetAllEntries()
-        {
-            return entries;
+        public List<string> GetAllOptions() { 
+            return new List<string>(entries);
         }
     }
 
