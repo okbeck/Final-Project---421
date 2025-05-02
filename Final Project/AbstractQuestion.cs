@@ -16,6 +16,10 @@ namespace Final_Project
             this.prompt = prompt;
             this.answer = answer;
         }
+        public string GetPrompt()
+        {
+            return prompt.Text;
+        }
 
         public abstract bool Evaluate();
     }

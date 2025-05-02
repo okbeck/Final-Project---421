@@ -10,14 +10,13 @@ namespace Final_Project
         [STAThread]
         static void Main()
         {
+            QuestionSource source = new MemorySource();      // or new JSONSource()
+            Builder builder = new MultipleChoiceBuilder();   // or OpenEndedBuilder
+
+            Controller = new GameController(source, builder);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            // Initialize the shared controller
-            Controller = new GameController();
-            Controller.StartGame(); // Loads MainMenuState
-
-            // Launch the main form
             Application.Run(new Form1());
         }
     }

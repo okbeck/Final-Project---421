@@ -41,7 +41,7 @@ namespace Final_Project
                 if (currentQuestionIndex + 1 < questions.Count)
                     currentQuestionIndex++;
                 else
-                    currentQuestionIndex = 0; // wrap around or keep at last depending on game logic
+                    currentQuestionIndex = questions.Count - 1; // wrap around or keep at last depending on game logic
             }
             finally { lockObj.ExitWriteLock(); }
         }

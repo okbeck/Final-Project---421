@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace Final_Project
 {
-    public class MainMenuState : GameState
+    public class PauseState : GameState
     {
         public override GameState Render(int @event)
         {
-            Console.WriteLine("Rendering Main Menu");
+            Console.WriteLine("Rendering Pause");
             return NextState(@event);
         }
 
         public override GameState HandleInput(Button apply, Button save, Button revert)
         {
-            Console.WriteLine("Main Menu Input");
+            Console.WriteLine("Pause Input");
             return this;
         }
 
@@ -24,9 +24,9 @@ namespace Final_Project
             @event switch
             {
                 GameEvent => InGame,
-                ApplyEvent => CreateQuiz,
-                SaveEvent => UploadQuiz,
+                SaveEvent => Stats,
                 _ => this
             };
     }
+
 }

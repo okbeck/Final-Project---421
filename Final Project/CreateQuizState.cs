@@ -6,27 +6,27 @@ using System.Threading.Tasks;
 
 namespace Final_Project
 {
-    public class MainMenuState : GameState
+    public class CreateQuizState : GameState
     {
         public override GameState Render(int @event)
         {
-            Console.WriteLine("Rendering Main Menu");
+            Console.WriteLine("Rendering Create Quiz");
             return NextState(@event);
         }
 
         public override GameState HandleInput(Button apply, Button save, Button revert)
         {
-            Console.WriteLine("Main Menu Input");
+            Console.WriteLine("Create Quiz Input");
             return this;
         }
 
         protected override GameState NextState(int @event) =>
             @event switch
             {
-                GameEvent => InGame,
-                ApplyEvent => CreateQuiz,
                 SaveEvent => UploadQuiz,
+                RevertEvent => MainMenu,
                 _ => this
             };
     }
+
 }

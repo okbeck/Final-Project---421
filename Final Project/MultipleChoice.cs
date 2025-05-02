@@ -9,22 +9,31 @@ namespace Final_Project
 {
     public class MultipleChoice : AbstractQuestion_Options
     {
-        private int selectedIndex;
 
-        public MultipleChoice(Prompt prompt, Answer answer, List<string> entries, int selectedIndex)
+        public MultipleChoice(Prompt prompt, Answer answer, Options options)
             : base(prompt, answer, new Options())
         {
-            foreach (var entry in entries)
-            {
-                this.options.AddEntry(entry);
-            }
-            this.selectedIndex = selectedIndex;
+//            foreach (var entry in entries)
+//            {
+//                this.options.AddEntry(entry);
+//            }
+        }
+
+        public List<string> GetOptions()
+        {
+            return options.GetAllOptions(); // assumes Options has GetAllOptions()
+        }
+
+        private string userChoice;
+
+        public void SetUserChoice(string selected)
+        {
+            userChoice = selected;
         }
 
         public override bool Evaluate()
         {
-            string selected = options.GetOption(selectedIndex);
-            return selected != null && selected.Equals(answer.Text);
+            return userChoice == answer.Text;
         }
 
         public string GetCorrectAnswer() => answer.Text;

@@ -13,8 +13,7 @@ namespace Final_Project
     {
         protected Options options;
 
-        public AbstractQuestion_Options(Prompt prompt, Answer answer, Options options)
-            : base(prompt, answer)
+        public AbstractQuestion_Options(Prompt prompt, Answer answer, Options options): base(prompt, answer)
         {
             this.options = options;
         }
