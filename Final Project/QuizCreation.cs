@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Final_Project
 {
-    public partial class QuizCreation: Form
+    public partial class QuizCreation : Form
     {
         public QuizCreation()
         {
