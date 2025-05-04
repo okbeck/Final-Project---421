@@ -1,0 +1,14 @@
+C:\Users\hopeo\Downloads\QuizGame (1)\QuizGame\obj\Debug\net6.0-windows\QuizGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hopeo\Downloads\QuizGame (1)\QuizGame\obj\Debug\net6.0-windows\QuizGame.AssemblyInfoInputs.cache
+C:\Users\hopeo\Downloads\QuizGame (1)\QuizGame\obj\Debug\net6.0-windows\QuizGame.AssemblyInfo.cs
+C:\Users\hopeo\Downloads\QuizGame (1)\QuizGame\obj\Debug\net6.0-windows\QuizGame.csproj.CoreCompileInputs.cache
+C:\Users\hopeo\Downloads\QuizGame (1)\QuizGame\bin\Debug\net6.0-windows\QuizGame.exe
+C:\Users\hopeo\Downloads\QuizGame (1)\QuizGame\bin\Debug\net6.0-windows\QuizGame.deps.json
+C:\Users\hopeo\Downloads\QuizGame (1)\QuizGame\bin\Debug\net6.0-windows\QuizGame.runtimeconfig.json
+C:\Users\hopeo\Downloads\QuizGame (1)\QuizGame\bin\Debug\net6.0-windows\QuizGame.dll
+C:\Users\hopeo\Downloads\QuizGame (1)\QuizGame\bin\Debug\net6.0-windows\QuizGame.pdb
+C:\Users\hopeo\Downloads\QuizGame (1)\QuizGame\obj\Debug\net6.0-windows\QuizGame.dll
+C:\Users\hopeo\Downloads\QuizGame (1)\QuizGame\obj\Debug\net6.0-windows\refint\QuizGame.dll
+C:\Users\hopeo\Downloads\QuizGame (1)\QuizGame\obj\Debug\net6.0-windows\QuizGame.pdb
+C:\Users\hopeo\Downloads\QuizGame (1)\QuizGame\obj\Debug\net6.0-windows\QuizGame.genruntimeconfig.cache
+C:\Users\hopeo\Downloads\QuizGame (1)\QuizGame\obj\Debug\net6.0-windows\ref\QuizGame.dll
