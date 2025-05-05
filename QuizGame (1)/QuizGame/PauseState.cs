@@ -1,3 +1,4 @@
+// Game state shown when the quiz is paused
 namespace QuizGame
 {
     public class PauseState : GameState

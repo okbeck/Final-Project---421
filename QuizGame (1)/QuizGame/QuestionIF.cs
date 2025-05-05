@@ -1,3 +1,4 @@
+// Interface for a quiz question
 namespace QuizGame
 {
     public interface QuestionIF

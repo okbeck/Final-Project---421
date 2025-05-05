@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using QuizGame;
 
+// Contains a list of questions and handles quiz logic
 namespace QuizGame
 {
     public class Quiz : QuizIF

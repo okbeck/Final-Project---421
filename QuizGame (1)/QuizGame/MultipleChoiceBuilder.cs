@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 
+// Builder for creating multiple choice questions
 namespace QuizGame
 {
     public class MultipleChoiceBuilder : Builder

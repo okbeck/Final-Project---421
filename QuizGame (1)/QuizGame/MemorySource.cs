@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 
+// A question source that uses in-memory quiz data
 namespace QuizGame
 {
     public class MemorySource : QuestionSource

@@ -1,6 +1,7 @@
 // override
 using QuizGame;
 
+// Controls main game logic and transitions between states
 namespace QuizGame
 {
     public class GameController

@@ -1,3 +1,4 @@
+// Base class for all types of questions
 namespace QuizGame
 {
     public abstract class AbstractQuestion : QuestionIF

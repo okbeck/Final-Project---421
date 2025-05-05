@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 
+// Loads quiz data from a CSV file
 namespace QuizGame
 {
     public class CSVSource : QuestionSource
@@ -22,11 +23,15 @@ namespace QuizGame
                 foreach (var line in lines)
                 {
                     var parts = line.Split(',');
+
+                    if (parts.Length < 3)
+                        continue; // Skip malformed lines
+
                     string type = parts[0].Trim().ToLower();
                     string prompt = parts[1].Trim();
                     string correct = parts[2].Trim();
 
-                    if (type == "mc")
+                    if (type == "mc" && parts.Length >= 4 && !string.IsNullOrWhiteSpace(parts[3]))
                     {
                         string[] options = parts[3].Split(';');
                         var builder = new MultipleChoiceBuilder().SetPrompt(prompt).SetAnswer(correct);

@@ -1,5 +1,6 @@
 using System.Windows.Forms;
 
+// Main Windows Forms interface for the quiz game
 namespace QuizGame
 {
     public class MainForm : Form

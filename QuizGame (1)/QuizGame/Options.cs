@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 
+// Represents a set of options for multiple choice questions
 namespace QuizGame
 {
     public class Options

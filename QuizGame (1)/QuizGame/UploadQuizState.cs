@@ -1,7 +1,7 @@
-// override previous version
 using System.Windows.Forms;
 using QuizGame;
 
+// Game state for uploading/importing quizzes
 namespace QuizGame
 {
     public class UploadQuizState : GameState
@@ -24,11 +24,20 @@ namespace QuizGame
                         .GetValue(form);
                     var quiz = controller.GetQuiz();
                     var csv = new CSVSource();
-                    foreach (var q in csv.LoadQuestions())
-                        quiz.AddQuestion(q);
+                    var questions = csv.LoadQuestions();
 
-                    MessageBox.Show("CSV Quiz loaded successfully.");
-                    form.TransitionTo(new MainMenuState());
+                    if (questions.Count > 0)
+                    {
+                        foreach (var q in questions)
+                            quiz.AddQuestion(q);
+
+                        MessageBox.Show("CSV Quiz loaded successfully.");
+                        form.TransitionTo(new MainMenuState());
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to load CSV quiz. Please check the file format.");
+                    }
                 };
 
                 uploadJSON.Click += (s, e) =>
@@ -38,14 +47,26 @@ namespace QuizGame
                         .GetValue(form);
                     var quiz = controller.GetQuiz();
                     var json = new JSONSource();
-                    foreach (var q in json.LoadQuestions())
-                        quiz.AddQuestion(q);
+                    var questions = json.LoadQuestions();
 
-                    MessageBox.Show("JSON Quiz loaded successfully.");
-                    form.TransitionTo(new MainMenuState());
+                    if (questions.Count > 0)
+                    {
+                        foreach (var q in questions)
+                            quiz.AddQuestion(q);
+
+                        MessageBox.Show("JSON Quiz loaded successfully.");
+                        form.TransitionTo(new MainMenuState());
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to load JSON quiz. Please check the file format.");
+                    }
                 };
 
-                backBtn.Click += (s, e) => form.TransitionTo(new MainMenuState());
+                backBtn.Click += (s, e) =>
+                {
+                    form.TransitionTo(new MainMenuState());
+                };
 
                 form.AddControl(label);
                 form.AddControl(uploadCSV);
@@ -56,8 +77,14 @@ namespace QuizGame
             return this;
         }
 
-        public override IGameState HandleInput(string apply, string save, string revert) => this;
+        protected override IGameState NextState(int code)
+        {
+            return this;
+        }
 
-        protected override IGameState NextState(int eventCode) => this;
+        public override IGameState HandleInput(string userInput, string userName, string action)
+        {
+            return this;
+        }
     }
 }

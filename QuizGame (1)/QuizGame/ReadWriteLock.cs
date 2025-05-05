@@ -1,5 +1,6 @@
 using System.Threading;
 
+// Implements a read/write lock for thread-safe operations
 namespace QuizGame
 {
     public class ReadWriteLock

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hopeo\\Downloads\\QuizGame (1)\\QuizGame\\QuizGame.csproj",
+      "projectUniqueName": "C:\\PSU\\SWENG 421\\Quiz Game Branch\\QuizGame (1)\\QuizGame (1)\\QuizGame\\QuizGame.csproj",
       "projectName": "QuizGame",
-      "projectPath": "C:\\Users\\hopeo\\Downloads\\QuizGame (1)\\QuizGame\\QuizGame.csproj",
+      "projectPath": "C:\\PSU\\SWENG 421\\Quiz Game Branch\\QuizGame (1)\\QuizGame (1)\\QuizGame\\QuizGame.csproj",
       "packagesPath": "C:\\Users\\hopeo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hopeo\\Downloads\\QuizGame (1)\\QuizGame\\obj\\",
+      "outputPath": "C:\\PSU\\SWENG 421\\Quiz Game Branch\\QuizGame (1)\\QuizGame (1)\\QuizGame\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,5 +1,6 @@
 using QuizGame;
 
+// Base class for loading a quiz from a source
 namespace QuizGame
 {
     public abstract class AbstractLoadableQuiz

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 
+// Multiple choice question implementation
 namespace QuizGame
 {
     public class MultipleChoice : AbstractQuestion_Options

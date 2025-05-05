@@ -2,6 +2,7 @@ using System;
 using System.Windows.Forms;
 using QuizGame;
 
+// Entry point of the application
 namespace QuizGame
 {
     internal static class Program

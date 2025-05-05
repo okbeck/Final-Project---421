@@ -1,3 +1,4 @@
+// Represents an answer to a quiz question
 namespace QuizGame
 {
     public class Answer

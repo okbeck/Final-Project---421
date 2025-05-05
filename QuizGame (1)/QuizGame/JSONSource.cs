@@ -3,6 +3,7 @@ using System.IO;
 using System.Text.Json;
 using System.Windows.Forms;
 
+// Loads quiz data from a JSON file
 namespace QuizGame
 {
     public class JSONSource : QuestionSource

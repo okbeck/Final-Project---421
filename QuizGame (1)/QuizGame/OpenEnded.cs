@@ -1,3 +1,4 @@
+// Open-ended (text) question implementation
 namespace QuizGame
 {
     public class OpenEnded : AbstractQuestion

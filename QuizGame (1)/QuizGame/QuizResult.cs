@@ -1,5 +1,6 @@
 using System;
 
+// Stores and calculates quiz results
 namespace QuizGame
 {
     public class QuizResult

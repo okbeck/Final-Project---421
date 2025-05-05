@@ -1,3 +1,4 @@
+// Represents a concrete state for the game
 namespace QuizGame
 {
     public abstract class GameState : IGameState

@@ -1,3 +1,4 @@
+// Represents a question prompt (the question text itself)
 namespace QuizGame
 {
     public class Prompt

@@ -1,3 +1,4 @@
+// Builder for creating open-ended questions
 namespace QuizGame
 {
     public class OpenEndedBuilder : Builder

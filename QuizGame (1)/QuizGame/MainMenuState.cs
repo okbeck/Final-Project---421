@@ -1,6 +1,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
+// Game state for the main menu screen
 namespace QuizGame
 {
     public class MainMenuState : GameState
@@ -48,12 +49,31 @@ namespace QuizGame
                 Location = new Point(200, 160)
             };
 
+            Button createBtn = new Button
+            {
+                Text = "Create Quiz",
+                Size = new Size(200, 40),
+                Location = new Point(200, 220)
+            };
+
             Button exitBtn = new Button
             {
                 Text = "Exit",
                 Size = new Size(200, 40),
-                Location = new Point(200, 220)
+                Location = new Point(200, 280)
             };
+
+            startBtn.Click += (s, e) => form.TransitionTo(new InGameState());
+            uploadBtn.Click += (s, e) => form.TransitionTo(new UploadQuizState());
+            createBtn.Click += (s, e) => form.TransitionTo(new CreateQuizState());
+            exitBtn.Click += (s, e) => Application.Exit();
+
+            panel.Controls.Add(title);
+            panel.Controls.Add(startBtn);
+            panel.Controls.Add(uploadBtn);
+            panel.Controls.Add(createBtn);
+            panel.Controls.Add(exitBtn);
+
 
             startBtn.Click += (s, e) => form.TransitionTo(new InGameState());
             uploadBtn.Click += (s, e) => form.TransitionTo(new UploadQuizState());

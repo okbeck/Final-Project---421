@@ -1,3 +1,4 @@
+// Coordinates building quiz questions using builder pattern
 namespace QuizGame
 {
     public interface Builder

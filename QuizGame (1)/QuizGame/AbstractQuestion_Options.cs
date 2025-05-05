@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 
+// Abstract class for questions that include selectable options
 namespace QuizGame
 {
     public abstract class AbstractQuestion_Options : AbstractQuestion

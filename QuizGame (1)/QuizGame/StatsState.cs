@@ -1,5 +1,6 @@
 using System.Windows.Forms;
 
+// Game state that displays quiz statistics or scores
 namespace QuizGame
 {
     public class StatsState : GameState

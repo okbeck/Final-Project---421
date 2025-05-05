@@ -1,3 +1,4 @@
+// Interface for game states (menu, quiz, results, etc.)
 namespace QuizGame
 {
     public interface IGameState
